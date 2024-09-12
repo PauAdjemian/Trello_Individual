@@ -1,0 +1,78 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css";
+
+.box:last-child { 
+    margin-bottom: 1.5rem; 
+}
+
+.task-list-content {
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.task-list-content::-webkit-scrollbar {
+    width: 5px;
+}
+
+.task-list-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.task-list-content::-webkit-scrollbar-thumb {
+    background: #888888;
+    border-radius: 6px;
+}
+
+#eliminar-tarea {
+    margin-top: 5px;
+    height: 20px;
+    width: 20px;
+}
+
+.columns.board {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.columns.board >.column.custom-column {
+    width: 290px;    
+}
+
+.position {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 10px;
+}
+
+@media (width > 767px) {
+    .columns.board {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;        
+    }
+}
+
+@media (width > 1023px) {
+    .columns.board {
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+@media (width > 1439px) {
+    .columns.board > .column.custom-column{
+        margin-left: 1.5%;
+        margin-right: 1.5%;
+    }
+    .board.columns.mx-1.is-multiline {
+        overflow-x: auto;
+        white-space: nowrap;
+        flex-wrap: nowrap;
+    }
+}
